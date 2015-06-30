@@ -1,0 +1,55 @@
+\section{Data and Simulation Samples}
+\label{sec:dataset}
+
+This analysis is performed with xxx primary datasets. 
+The trigger paths, together with the JSON files, are summarized in 
+Table~\ref{tab:samples:datasets}.
+
+\begin{table}[!Hhbt]
+    \centering
+    \caption{\small Datasets and JSON files included in the analysis} 
+    \label{tab:samples:datasets}
+    \begin{tabular}{|c|c|}
+        \hline
+            {Dataset}{[Run Range]}&{}\\
+            {JSON file}&{Integrated Luminosity}\\
+        \hline
+            \texttt{/MuOnia/Run2015A-xxxx-v1/AOD}\texttt{[xxxx,xxxx]}&{xx.xx}\\
+            \texttt{\footnotesize Cert\_xxxx-xxxx\_13TeV\_PromptReco\_Collisions15\_JSON\_MuonPhys.txt}&{$~~\pbinv$}\\
+        \hline
+            \texttt{/MuOnia/Run2015B-xxxx-v1/AOD}\texttt{[xxxx,xxxx]}&{xx.xx}\\
+            \texttt{\footnotesize Cert\_xxxx-xxxx\_13TeV\_PromptReco\_Collisions15\_JSON\_MuonPhys.txt}&{$~~\pbinv$}\\
+        \hline
+        \hline
+        Sum &{yy.yy} $\pbinv$\\
+        \hline
+    \end{tabular}
+\end{table}
+\FloatBarrier
+
+The Monte Carlo (MC) simulated samples used in this analysis are produced officially. The production configurations, global tags, and the setup for pile-up mixing, are from the official campaigns.
+
+The MC events are first generated with PYTHIA8. In the official production configuration, the generation of $B^+$ events is carried out by PYTHIA, and then the decay of $B^+$ events is implemented by EvtGen with the standard SVS (pseudo scaler decaying to vector and pseudo scaler) model. In order to enhance the production speed, generator filters have been applied at the generator step of the whole production chain. 
+% KFC: we have to describe our generator filters here. 
+
+Summary of details for each of the fully simulated samples used in the analysis are summarized in Table~\ref{tab:samples:MC}. 
+% KFC: some generator level distributions?
+
+\begin{table}[!Hhbt]
+    \centering
+    \caption{\small List of MC samples used in the analysis} 
+    \label{tab:samples:MC}
+    \begin{tabular}{|c|c|c|}
+        \hline
+            {Process}& & \\
+            {Data Path}& Size & {Effective \mathcal{L}}\\
+        \hline
+            $B^+ \to J/\psi K^+$ & & xx.xx \\
+            \texttt{\footnotesize /BuToJPsiK\_13TeV-pythia8-evtgen/Summer15\_xxxxx/AODSIM}&{xxxxxx}&{$~~\pbinv$}\\
+        \hline
+            $B^0 \to J/\psi K^*$ & & xx.xx \\
+            \texttt{\footnotesize /BdToJPsiKstar\_13TeV-pythia8-evtgen/Summer15\_xxxxx/AODSIM}&{xxxxxx}&{$~~\pbinv$}\\
+        \hline
+    \end{tabular}
+\end{table}
+\FloatBarrier

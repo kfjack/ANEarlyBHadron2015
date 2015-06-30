@@ -1,0 +1,99 @@
+%%%%%%%%%%%%% local definitions %%%%%%%%%%%%%%%%%%%%%
+% This allows for switching between one column and two column (cms@external) layouts
+% The widths should  be modified for your particular figures. You'll need additional copies if you have more than one standard figure size.
+\newlength\cmsFigWidth
+\ifthenelse{\boolean{cms@external}}{\setlength\cmsFigWidth{0.85\columnwidth}}{\setlength\cmsFigWidth{0.4\textwidth}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsLeft}{top}}{\providecommand{\cmsLeft}{left}}
+\ifthenelse{\boolean{cms@external}}{\providecommand{\cmsRight}{bottom}}{\providecommand{\cmsRight}{right}}
+%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%
+
+\cmsNoteHeader{AN-2015-xxx} % This is over-written in the CMS environment: useful as preprint no. for export versions
+
+% User preferences
+\makeatletter 
+  \newcommand\figcaption{\def\@captype{figure}\caption} 
+  \newcommand\tabcaption{\def\@captype{table}\caption} 
+\makeatother
+
+% Define graphics path
+\graphicspath{{plots/},{notThisAna/}}
+
+% >> Title: please make sure that the non-TeX equivalent is in PDFTitle below
+\title{Measurement of the $B^+$ hadron production cross section in $pp$ collisions at 13 TeV}
+
+% KFC: need to include other people!
+
+\address[purdue]{Purdue University}
+\author[purdue]{Monika Sharma}
+
+\address[ntu]{National Taiwan University}
+\author[ntu]{Kai-Feng Chen}
+
+% >> Date
+% The date is in yyyy/mm/dd format. Today has been
+% redefined to match, but if the date needs to be fixed, please write it in this fashion.
+% For papers and PAS, \today is taken as the date the head file (this one) was last modified according to svn: see the RCS Id string above.
+% For the final version it is best to "touch" the head file to make sure it has the latest date.
+\date{\today}
+
+% >> Abstract
+% Abstract processing:
+% 1. **DO NOT use \include or \input** to include the abstract: our abstract extractor will not search through other files than this one.
+% 2. **DO NOT use %**                  to comment out sections of the abstract: the extractor will still grab those lines (and they won't be comments any longer!).
+% 3. **DO NOT use tex macros**         in the abstract: External TeX parsers used on the abstract don't understand them.
+
+\abstract{ 
+Measurements of the total and differential cross sections with respect to transverse momentum and rapidity for $B^+$ mesons produced in $pp$ collisions at $\sqrt{s} = 13 TeV$ are presented, with a data set correspond to an integrated luminosity of xxx inverse picobarns collected by the CMS detector. The exclusive decay $B^+ \to J/\psi K^+$, with $J/\psi$ meson decaying to a pair of muons, is used to reconstruct $B^+$ mesons. The production cross section of $B^+$ hadron is measured as a function of the transverse momentum and rapidity. 
+} 
+
+% >> PDF Metadata
+% Do not comment out the following hypersetup lines (metadata). They will disappear in NODRAFT mode and are needed by CDS.
+% Also: make sure that the values of the metadata items are sensible and are in plain text (no TeX! -- for \sqrt{s} use sqrt(s) -- this will show with extra quote marks in the draft version but is okay).
+
+\hypersetup{%g
+    pdfauthor={Monika Sharma, Kai-Feng Chen},%
+    pdftitle={Measurement of the B hadron production cross section in pp collisions at 13 TeV},%
+    pdfsubject={CMS},%
+    pdfkeywords={CMS, physics, B-physics}
+}
+
+\maketitle{} %maketitle comes after all the front information has been supplied
+
+% >> Text
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Begin text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% **DO NOT REMOVE THE BIBLIOGRAPHY** which is located before the appendix.
+%% You can take the text between here and the bibiliography as an example which you should replace with the actual text of your document.
+%% If you include other TeX files, be sure to use "\input{filename}" rather than "\input filename".
+%% The latter works for you, but our parser looks for the braces and will break when uploading the document.
+%%%%%%%%%%%%%%%
+
+%\tableofcontents
+
+%\newpage
+
+\input{sec_introduction}
+\input{sec_dataset}
+\input{sec_reconstruction}
+\input{sec_yieldextraction}
+\input{sec_results}
+\input{sec_systematics}
+\input{sec_summary}
+
+%\newpage
+
+% >> acknowledgements (for journal papers)
+% Please include the latest version from https://twiki.cern.ch/twiki/bin/viewauth/CMS/Internal/PubAcknow .
+%\input{Acknowledgements}
+
+%% **DO NOT REMOVE BIBLIOGRAPHY**
+\bibliography{auto_generated}   % will be created by the tdr script.
+
+%% examples of appendices. **DO NOT PUT \end{document} at the end
+%\clear-page
+\appendix
+
+%\input{appendix_a}
+
+%\section{PTDR Symbol Definitions\label{app:symdef}}
+
+%%% DO NOT ADD \end{document}!

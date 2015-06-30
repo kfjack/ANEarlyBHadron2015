@@ -1,0 +1,72 @@
+\section{Event Reconstruction and Selection}
+\label{sec:reconstruction}
+
+% KFC: describe the reconstruction procedure and selection here
+% KFC: put T&P here as well (?)
+
+The CMS high level trigger (HLT) evolved with increasing luminosity. As a result, some triggers may become `prescaled' to save the storage space and to prevent from exceeding the limitation of bandwidth. Within this analysis, we only use unprescaled triggers. 
+This analysis highly depends on the reconstruction of $J/\psi\to{}\mu{}^{+}\mu{}^{-}$, and the `HLT\_xxxxxx' triggers are chosen. The criteria of the triggers are listed below:
+\begin{itemize}
+\item xxx % KFC: put the actual criteria here
+\item yyy
+\end{itemize}
+Table~\ref{tab:selections:triggers} summarizes the information of HLT paths and the corresponding run ranges in this analysis.
+
+\begin{minipage}{\textwidth}
+    \centering
+    \tabcaption{\small High level trigger paths included in this analysis and the corresponding run ranges. These 
+    triggers are only differ in their output stream number, and no difference in terms of trigger criteria.}
+    \label{tab:selections:triggers}
+    \begin{tabular}{|c|c|c|}
+        \hline
+            {Trigger Path}&{[Run range]} & Luminosity \\
+        \hline
+            \texttt{HLT\_xxxxxx\_v1}&\texttt{[xxxxx,xxxxx]}& xx.xx $\pbinv$\\
+            \texttt{HLT\_xxxxxx\_v2}&\texttt{[xxxxx,xxxxx]}& xx.xx $\pbinv$\\            
+        \hline
+    \end{tabular}
+\end{minipage}
+\FloatBarrier
+
+After passing the HLT requirement, each $B^+$ candidate requires two muon candidates of opposite charges and a charged track (assigned as a charged kaon) to pass the baseline selection criteria discussed below.
+
+% KFC: need to verity this...what's the new soft muon cuts now?
+The official `soft muon' criteria are used in the analysis.
+The muon candidates should at least meet the quality `TMOneStationTight'. The muon track should associate with
+at least 6 strip hits and at least 2 pixel hits.
+The inner track fitting quality is controlled by a requirement on the 
+normalized $\chi{}^{2}$, which should be less than 1.8. 
+The impact parameters $|dxy|$ and $|dz|$ of the muon tracks are required to be smaller than 3 cm and 30 cm, respectively.
+
+For each pair of muon with opposite charges, a $J/\psi$ candidate is formed. 
+The transverse momentum of the $J/\psi$ candidate must be greater than x.x \GeVc. % KFC: need to be tighter then the trigger cut
+A vertex fitting procedure, based on the standard package KinematicVertexFitter, has been applied to the $J/\psi$ candidate using the daughter muons. The quality of their common vertex is controlled by requiring 
+the vertex probability to be at least xx\%. These criteria are summarized as following:
+\begin{itemize}
+\item xxx % KFC: put the actual criteria here
+\item yyy
+\end{itemize}
+
+Figure~xx shows the reconstructed $\mu^+\mu^-$ invariant mass distribution after the baseline selections.
+The dimuon candidates which are within the $J/\psi$ mass window are included in the upcoming reconstruction of $\mu^+\mu^-K$ candidate. 
+% KFC: consider a |y| dependent J/psi mass window?
+
+Charged tracks are assumed to be kaons in the reconstruction of $B^+ \to J/\psi K^+$.
+The baseline selections are applied:
+candidate kaons are required to have at least 10 strip hits and at least 2 pixel hits,
+and the fitting normalized $\chi{}^{2}$ should be smaller than 5. 
+The candidate kaons are required to have a minimal $p_{T}$ of x.x GeV.
+
+The reconstruction of $B^+ \to J/\psi K^+$ is carried out for each combination of $\mu^+\mu^- K^\pm$.
+A kinematical constrained fit has been introduced to each combination with the KinematicConstraindVertexFitter package. 
+The three tracks (two muons and one kaon) are required to be originated from a single common vertex.
+A $J/\psi$ mass constraint has been introduced to improve the resolution. 
+The $\chi^2$-probability of the constrained fit should be at least above xx\% for rejecting bad combinations. 
+The baseline selections for $\mu^+\mu^- K^\pm$ candidates are listed below:
+\begin{itemize}
+\item xxx % KFC: put the actual criteria here
+\item yyy
+\end{itemize}
+
+The reconstructed invariant mass distribution of $\mu\muK$ candidates after the baseline selections is shown in Fig.~xx.
+

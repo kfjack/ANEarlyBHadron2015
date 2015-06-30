@@ -1,0 +1,24 @@
+--- COMMENTS may be placed outside the @ENTRYTYPE{ ... } stuctures
+--- CMS guidelines
+---- All URLs for CMS notes, ANs, etc, should refer to the CDS server, not the CMS server. Use our standard format for them, as shown below.
+---- If a collaboration is referenced by the collaboration name, it should be listed in the AUTHOR field. If by a first author + "and others", the collaboration name must be listed in the COLLABORATION field.
+----   We use the collaboration in preference to the author field, but most journals will list both, so include both.
+---- Number of authors to list:
+----   PRL requests that we include all authors up to fifteen except for large collaborations, and we take this as our internal guide as well.
+----   The individual journal bib style file (theirs, ours, PLB, etc.) will truncate at the appropriate point. We have ours set to _3_ as
+----   a reminder to list the appropriate number. For large collaborations, just use first author + "and others".
+---- Use only the URL field instead of embedding an href (this is a change in our practice).
+---- A reference only published on the arXiv should be listed as UNPUBLISHED (with a note "Submitted to XXX" for CMS papers).
+---- Some journals will lowercase the title: use {} to protect words which must be capitalized, e.g., {LHC}, {TeV}, {CERN}, {CMS}. Do not escape the entire title as it will then clash with the journal style.
+---- Journal names: the journals generally include the series in the journal name, "Physical Review D", vol 5, rather than PR D5
+%
+% We cite notes hosted in a CDS collection as if they are in a journal. This may be changed to a TECHREPORT.
+%
+
+@article{Dorigo:2010,
+      author         = "Tommaso Dorigo",
+      title          = "{Practical Calculations of the Look-Elsewhere Effect}",
+      journal        = "note",
+      volume         = "\href{http://www.pd.infn.it/~dorigo/LEE_example.ps}{http://www.pd.infn.it/~dorigo/LEE_example.ps}",      
+      year           = "2010",
+}
